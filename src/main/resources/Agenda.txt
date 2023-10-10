@@ -1,0 +1,9 @@
+Variables, Type Inference and Control Flow
+Nullability
+Class Declaration and Data classes
+Object Declaration
+Functions (Top level, Extension, Higher Order, Default arguments)
+Single Abstract Method
+Smart Casts
+Destructuring Declaration
+Kotlin X Serialization

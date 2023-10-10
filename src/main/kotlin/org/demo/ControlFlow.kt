@@ -14,15 +14,18 @@ fun main() {
     val b = 3
     var max = a
     if (a < b) max = b
+
     // With else
     if (a > b) {
         max = a
     } else {
         max = b
     }
+
     // As expression. There is no ternary operator condition ? then : else in Kotlin.
     // When using if as an expression, there are no curly braces {}
     max = if (a > b) a else b
+
     // You can also use `else if` in expressions:
     val maxLimit = 1
     val maxOrLimit = if (maxLimit > a) maxLimit else if (a > b) a else b
@@ -32,7 +35,6 @@ fun main() {
     // `when` defines a conditional expression with multiple branches.
     // It is similar to the switch statement in C-like languages. Its simple form looks like this.
     // https://kotlinlang.org/docs/control-flow.html#when-expression
-
     when (a) {
         1 -> print("x == 1")
         2 -> print("x == 2")
@@ -40,7 +42,7 @@ fun main() {
             print("x is neither 1 nor 2")
         }
     }
-
+    println()
     when (getColor()) {
         RED -> println("red")
         GREEN -> println("green")
@@ -103,26 +105,31 @@ fun main() {
     }
 
     // Ranges: https://play.kotlinlang.org/byExample/02_control_flow/03_Ranges
-    for (i in 0..3) {             // Iterates over a range starting from 0 up to 3 (inclusive). Like 'for(i=0; i<=3; ++i)' in other programming languages (C/C++/Java).
+    // Iterates over a range starting from 0 up to 3 (inclusive). Like 'for(i=0; i<=3; ++i)' in other programming languages (C/C++/Java).
+    for (i in 0..3) {
         print(i)
     }
     print(" ")
 
-    for (i in 0 until 3) {        // Iterates over a range starting from 0 up to 3 (exclusive). Like for loop in Python or like 'for(i=0; i<3; ++i)' in other programming languages (C/C++/Java).
+    // Iterates over a range starting from 0 up to 3 (exclusive). Like for loop in Python or like 'for(i=0; i<3; ++i)' in other programming languages (C/C++/Java).
+    for (i in 0 until 3) {
         print(i)
     }
     print(" ")
 
-    for (i in 2..8 step 2) {      // Iterates over a range with a custom increment step for consecutive elements.
+    // Iterates over a range with a custom increment step for consecutive elements.
+    for (i in 2..8 step 2) {
         print(i)
     }
     print(" ")
 
-    for (i in 3 downTo 0) {      // Iterates over a range in reverse order.
+    // Iterates over a range in reverse order.
+    for (i in 3 downTo 0) {
         print(i)
     }
     print(" ")
     println()
+
     // Ranges are also useful in if statements:
     val x = 2
     if (x in 1..5) {            // Checks if a value is in the range.
