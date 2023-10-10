@@ -51,4 +51,22 @@ fun main() {
         .filter { it.length > 5 } //  filters what all should be in the next step
         .map { Pair(it, it.length) }// We map each individual entry of the collection
         .forEach{ println(it)}
+
+    // Arrays have a known implementation and represented in JVM bytecode with a JVM array
+    val countries = arrayOf("Austria", "Germany") // Type `Array<String>` is inferred
+    println("countries $countries")
+    var intArray = IntArray(3)    // Fixed size to change the size they need to be copied
+    intArray[0] = 1 //sets 1 as the value at the 0 index
+    println("intArray value at position 0: ${intArray[0]} and size: ${intArray.size}")
+
+    // Lists are implementations of the generic List interface (unknown implementation)
+    // Lists or specific implementations of Lists should be preferred
+    // Convenience functions like sort etc..
+    val capitals = listOf("Vienna", "Berlin") // Type `List<String>` is inferred
+    println(capitals)
+    // capitals.add("Delhi")
+    val mutableCities = capitals.toMutableList()
+    mutableCities.add("Delhi")
+    println(" mutableCities: $mutableCities")
+
 }

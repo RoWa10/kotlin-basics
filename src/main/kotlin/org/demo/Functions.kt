@@ -7,23 +7,27 @@ class Pet {
     }
 }
 
-// Top-level functions, basically functions without classes and are placed in a file called `<Filename>Kt.class`
+// Top-level functions
+// basically functions without classes and are placed in the declared file called `<Filename>Kt.class`
 fun cat() = Pet().cat()
 
 // return value is inferred, functions as expression
 fun hello() = "Hello"
 
-// functions can have default values for the arguments.BTS, compiler creates multiple functions with and without default values.
+// functions can have default values for the arguments,
+// which are used when you skip the corresponding argument from the calling place
 fun greet(name: String = "Kotlin"): String =
     hello() + " " + name
 
-// every function returns something if nothing useful then Unit
+// every function returns something, if nothing useful then Unit
 fun printMessage(): Unit =
     println("Hello World, How are you?")
 
 fun sum(x: Int, y: Int) = x + y // functions can have parameters
 
-fun operation(left: Int, right: Int): Int = left * right // return value can be specified
+// You can name one or more of a function's arguments when calling it.
+// This can be helpful when a function has many arguments and it's difficult to associate a value with an argument,
+fun operation(left: Int, right: Int): Int = left * right
 
 // Extension functions: Kotlin lets you add new members to any class with the extensions mechanism
 fun Int.addTwiceOf(y: Int): Int = this + (y * 2)
@@ -59,9 +63,9 @@ fun main() {
     println(hello()) // `Hello`
     println(sum(y = 1, x = 2)) // `3`
     println(greet()) // `Hello World`
-    println(operation(1, 2)) // `2`
+    println(operation(right = 1, left = 2)) // `2` Named arguments
     println(printMessage()) // `Hello World` and `kotlin.Unit`
-    println("Add twice of 4 to 2 ${2.addTwiceOf(4)}")
+    println("Add twice of 4 to 2: ${2.addTwiceOf(4)}")
     println("3pokes: $pokeThrice")
 
     // Invokes the higher-order function passing in two integer values and the function argument ::sum. :: is the notation that references a function by name in Kotlin.

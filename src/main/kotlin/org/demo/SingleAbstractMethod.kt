@@ -8,7 +8,7 @@ fun interface IntPredicate {
 
 // SAM conversions help make your code more concise and readable by using lambda expressions.
 // Kotlin can convert any lambda expression whose signature matches the signature of the interface's single method into the code,
-// which dynamically instantiates the interface implementation
+// and dynamically instantiates the interface implementation
 val isEven = IntPredicate { it % 2 == 0 }
 
 // Creating an instance of a class, concrete implementation

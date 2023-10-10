@@ -1,9 +1,10 @@
 package org.demo
 
+// https://kotlinlang.org/docs/null-safety.html#nullable-types-and-non-nullable-types
 fun main() {
 
     // neverNull has String type
-    var neverNull: String = "This can't be null"
+    var neverNull: String = "This can't be null, no more The Billion Dollar Mistake"
 
     // Throws a compiler error
     // neverNull = null
@@ -43,6 +44,8 @@ fun main() {
 }
 
 // A function that takes in a nullable string and returns its description.
+// The compiler tracks the information about the check you performed,
+// and allows the call to length inside the if
 fun describeString(maybeString: String?): String {
     if (!maybeString.isNullOrEmpty()) {
         return "String of length ${maybeString.length}"

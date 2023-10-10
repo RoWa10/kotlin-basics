@@ -3,7 +3,8 @@ package org.demo
 // https://kotlinlang.org/docs/classes.html
 
 // Declares a class without any properties or user-defined constructors.
-// A non-parameterized default constructor is created by Kotlin automatically. Classes don't need a body e.g. for markers
+// A non-parameterized default constructor is created by Kotlin automatically.
+// Classes don't need a body e.g. for markers, Experimental or Future Use purposes
 class Empty
 
 // Declares a class with two properties: immutable id and mutable email, and a constructor with two parameters id and email
@@ -72,7 +73,8 @@ class User {
         }
     //  set(value) {firstName = value}
     //  in Kotlin user.firstName = "value” is same as Java’s user.setFirstName("value").
-    //  So when set(value) {firstName = "value"} is called, then a recursive call happens and compiler throws a StackOverflow exception because we are calling setter inside the setter.
+    //  So when set(value) {firstName = "value"} is called,
+    //  then a recursive call happens and compiler throws a StackOverflow exception because we are calling setter inside the setter.
 
     var lastName: String = ""
         get() = field

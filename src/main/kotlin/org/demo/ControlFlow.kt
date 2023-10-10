@@ -56,7 +56,7 @@ fun main() {
     }
 
     when (getColor()) {
-        RED, GREEN -> println("red-green") // no branches for GREEN and BLUE
+        RED, GREEN -> println("red-green") // no branches for BLUE
         else -> println("not red") // 'else' is required
     }
 
@@ -96,6 +96,8 @@ fun main() {
 
     println("===============================================")
 
+    // Ranges: https://play.kotlinlang.org/byExample/02_control_flow/03_Ranges
+    // Iterates over a range starting from 0 up to 3 (inclusive). Like 'for(i=0; i<=3; ++i)' in other programming languages (C/C++/Java).
     for (i in 1..30) {
         when {
             i > 11 -> break // break out of the loop
@@ -104,8 +106,6 @@ fun main() {
         println(i) // print `2`, `4`, `6`, `8`, `10`
     }
 
-    // Ranges: https://play.kotlinlang.org/byExample/02_control_flow/03_Ranges
-    // Iterates over a range starting from 0 up to 3 (inclusive). Like 'for(i=0; i<=3; ++i)' in other programming languages (C/C++/Java).
     for (i in 0..3) {
         print(i)
     }
