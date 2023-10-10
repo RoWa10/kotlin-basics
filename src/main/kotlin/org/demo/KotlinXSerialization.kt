@@ -1,7 +1,6 @@
 package org.demo
 
 import kotlinx.serialization.Serializable
-import kotlinx.serialization.decodeFromString
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
 
@@ -15,9 +14,9 @@ fun main() {
     // Serializing objects
     val data = Student("Jane", 30)
     val string = Json.encodeToString(data)
-    println(string) // {"name":"kotlinx.serialization","language":"Kotlin"}
+    println(string) // {"name":"Jane","age":30}
     // Deserializing back into objects
     val obj = Json.decodeFromString<Student>(string)
-    println(obj) // Project(name=kotlinx.serialization, language=Kotlin)
+    println(obj) // Student(name=Jane, age=30)
 }
 
